@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Analisi degli Scostamenti</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+    
+    
+    
+    
+        <!-- Presentazione-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Progetto Di Sistemi di Controllo e Di Gestione</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Introduzione</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Scostamenti Totali</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Scostamenti Delle Materie Prime</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Scostamenti del Lavoro Diretto</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Scostamenti dei Ricavi</a></li>                </ul>
+            </div>
+        </nav>
+        
+        
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- Scostamenti Totali-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Introduzione
+                        <span class="text-primary"></span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        
+                        <a href="mailto:name@email.com"></a>
+                    </div>
+                    <h3 class="lead mb-3">Assunzioni: </h3>
+                    	<ul>
+                        	<li> Gli articoli venduti con quantità totale = 0 non li consideriamo </li>
+                            <li> Gli articoli venduti o prodotti con quantità minore di 0 non li consideriamo  </li>
+                            <li> Gli articoli lavorati con quantità di output = 0 significa che la macchina non è riuscita a lavorare quel pezzo</li>
+                            <li> Il costo delle materie prime per produrre un articolo lo consideriamo sempre, anche se la materia prima è prodotta da noi</li>
+                            <li> La quantità di materie prime che noi troviamo nei consumi serve per produrre esattamente la quantità di output che troviamo nell'impiego orario risorse</li>
+                            <li> Nell'impiego orario risorse, se un'articolo passa per più volte all'interno del montaggio la quantità di output va sommata</li>
+                            <li> La quantità di articolo che troviamo in output è la stessa che passa per tutto il processo produttivo</li>
+                        </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            
+            
+            
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                <h2 class="mb-5">Scostamenti Totali</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">     
+                <?php include(ciao.php);  ?>         	
+<table class = "table">
+  <thead class='thead-dark'>
+      <tr>
+      <th scope='col'></th>
+      <th scope='col'>BUDGET</th>
+      <th scope='col'>ΔV</th>
+      <th scope='col'>MIX STD</th>
+      <th scope='col'>Δmix</th>
+      <th scope='col'> MIX EFF </th>
+      <th scope='col'>ΔPz</th>
+      <th scope='col'>CONSUNTIVO</th>
+
+      </tr>
+  </thead>
+   <!--- visto che non riportiamo tutti i 413 articoli sennò verrebbe una tabella enorme riportiamo le quantità, i ricavi, gli scostamenti, i costi tot e il mol -->
+   <!-- MATERIALE DIRETTO --->
+   <tr class = "table__row">
+      <td class="cCentrato" style="background: rgba(10, 100, 100, 0.5);"><b>MATERIALE DIRETTO</b></td>
+      <td class="cCentrato" > 192 906,47€</td>
+      <td class="cCentrato" style="background-color:red;">108 575,86€</td>
+      <td class="cCentrato" >301 482,33€ </td>
+      <td class="cCentrato" style="background-color:green;"> -8 085,46€</td>
+      <td class="cCentrato" > 293 396,87€</td>
+      <td class="cCentrato" style="background-color:green;"> -3 757,37€</td>
+      <td class="cCentrato" > 289 639,50€</td>
+   </tr>
+   <!--- LAVORO DIRETTO ----->
+   <tr class = "table__row">
+     <td class="cCentrato" style="background: rgba(10, 100, 100, 0.5);"><b>LAVORO DIRETTO</b></td>
+      <td class="cCentrato" >198 729,00€</td>
+      <td class="cCentrato" style="background-color:red;" >112 777,36€</td>
+      <td class="cCentrato" > 311 506€</td>
+      <td class="cCentrato" style="background-color:red;">37 199,33€</td>
+      <td class="cCentrato" >348 705,99€</td>
+      <td class="cCentrato" style="background-color:red;" >22 288,31€</td>
+      <td class="cCentrato" >370 994,00€</td>
+   </tr>
+     <!--- COSTI TOTALI ----->
+   <tr class = "table__row">
+     <td class="cCentrato" style="background: rgba(10, 100, 100, 0.5);"><b>COSTI TOTALI</b></td>
+       <td class="cCentrato" > 391 635,47€</td>
+       <td class="cCentrato" style="background-color:red;"> 221 353,22€</td>
+       <td class="cCentrato" > 612 988,69€</td>
+       <td class="cCentrato" style="background-color:red;">29 113,87€</td>
+       <td class="cCentrato" > 642 102,56€</td>
+       <td class="cCentrato"style="background-color:red;">18 530,94€</td>
+       <td class="cCentrato" > 660 633,5€</td>
+   </tr>
+    <!--- RICAVI TOTALI ----->
+   <tr class = "table__row">
+     <td class="cCentrato" style="background: rgba(10, 100, 100, 0.5);"><b>RICAVI TOTALI</b></td>
+       <td class="cCentrato" >395 337,55€</td>
+       <td class="cCentrato" style="background-color:green;">115 196,62€</td>
+       <td class="cCentrato" >510 534,17€</td>
+       <td class="cCentrato" style="background-color:green;" >36 879,60€</td>
+       <td class="cCentrato" > 547 413,77€</td>
+       <td class="cCentrato" style="background-color:red;" >-39 570,92€</td>
+       <td class="cCentrato">507 842,85€</td>
+   </tr>
+   <!--- MOL ----->
+   <tr class = "table__row">
+     <td class="cCentrato" style="background: rgba(10, 100, 100, 0.5);"><b>MARGINE</b></td>
+       <td class="cCentrato" style="background-color:green;">3702,08€</td>
+       <td class="cCentrato" style="background-color:red;">-106 156,60€</td>
+       <td class="cCentrato" style="background-color:red;">-102 454,52€</td>
+       <td class="cCentrato" style="background-color:green;">7 765,73€</td>
+       <td class="cCentrato" style="background-color:red;">-94 688,79€ </td>
+       <td class="cCentrato" style="background-color:red;" >-58 101,85€</td>
+       <td class="cCentrato" style="background-color:red;">-152 790,64€</td>
+   </tr>
+</table>
+					</div>
+                </div>
+            </section>
+            <hr class="m-0" />
+         
+         
+<!-- SCOSTAMENTI DI MATERIE PRIME --->
+<section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Scostamenti delle Materie Prime </h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <table class = "table">
+  								<thead class='thead-dark'>
+      								<tr>
+      								<th scope='col'></th>
+      								<th scope='col'>BUDGET</th>
+      								<th scope='col'>ΔV</th>
+      								<th scope='col'>MIX STD</th>
+      								<th scope='col'>Δmix</th>
+     	 							<th scope='col'> MIX EFF </th>
+      								<th scope='col'>ΔPz</th>
+      								<th scope='col'>CONSUNTIVO</th>
+      								</tr>
+  								</thead>
+     				<!--- visto che non riportiamo tutti i 413 articoli sennò verrebbe una tabella enorme riportiamo le quantità, i ricavi, gli scostamenti, i costi tot e il mol -->
+   					<!-- MATERIALE DIRETTO --->
+   									<tr class = "table__row">
+      								<td class="cCentrato" style="background: rgba(10, 100, 100, 0.5);"><b>MATERIALE DIRETTO</b></td>
+     				 				<td class="cCentrato" > 192 906,47€</td>
+      								<td class="cCentrato" style="background-color:red;">108 575,86€</td>
+      								<td class="cCentrato" >301 482,33€ </td>
+      								<td class="cCentrato" style="background-color:green;"> -8 085,46€</td>
+      								<td class="cCentrato" > 293 396,87€</td>
+      								<td class="cCentrato" style="background-color:green;"> -3 757,37€</td>
+     					 			<td class="cCentrato" > 289 639,50€</td>
+   									</tr>
+							</table>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <div class="subheading mb-3">CONSIDERAZIONI</div>
+                            <ul>
+                            	<li> Rispetto alla quantità che noi produciamo a Budget, produciamo quasi il doppio delle risorse a Consuntivo </li>
+                                <li> Rispetto invece agli articoli che pensavamo di produrre a Budget, a Consuntivo abbiamo prodotto articoli che costano di meno </li>
+                                <li> Il prezzo unitario delle materie prime che utilizziamo a Consuntivo è più basso di quello che avevamo previsto </li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                    	<div class="social-icons">
+                        <a class="social-icon" href="scostamenti_mp_articolo.php">x Articolo</a>
+                        <a class="social-icon" href="scostamenti_mp_MP.php">x MP</a>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            
+            
+            
+            
+            
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                <h2 class="mb-5">Scostamenti Lavoro Diretto</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">         	
+					<table class = "table">
+  						<thead class='thead-dark'>
+     	 					<tr>
+      						<th scope='col'></th>
+      						<th scope='col'>BUDGET</th>
+      						<th scope='col'>ΔV</th>
+      						<th scope='col'>MIX STD</th>
+      						<th scope='col'>Δmix</th>
+      						<th scope='col'> MIX EFF </th>
+      						<th scope='col'>ΔDifett</th>
+      						<th scope='col'>DIFETTOSITA' CONSUNTIVO</th>
+      						<th scope='col'>ΔOre Impiegate</th>
+      						<th scope='col'>ORE CONS</th>
+      						<th scope='col'>ΔCosto Impiego</th>
+      						<th scope='col'>CONSUNTIVO</th>
+      						</tr>
+  						</thead>
+  			<!--- LAVORO DIRETTO ----->
+  						 <tr class = "table__row">
+     						<td class="cCentrato" style="background: rgba(10, 100, 100, 0.5);"><b>LAVORO DIRETTO</b></td>
+      						<td class="cCentrato" >198 729,00€</td>
+      						<td class="cCentrato" style="background-color:red;" >112 777,36€</td>
+      						<td class="cCentrato" > 311 506€</td>
+      						<td class="cCentrato" style="background-color:red;">37 199,33€</td>
+      						<td class="cCentrato" >348 705,99€</td>
+      						<td class="cCentrato" style="background-color:red;" >82 489,51€</td>
+      						<td class="cCentrato" >431 195,20€ </td>
+      						<td class="cCentrato" style="background-color:green;" >-116 173,3€</td>
+      						<td class="cCentrato" >315 021,90€</td>
+      						<td class="cCentrato" style="background-color:red;" >55 972,10€</td>
+      						<td class="cCentrato" >370 994,00€</td>
+   							</tr>
+						</table>
+					</div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <div class="subheading mb-3">CONSIDERAZIONI</div>
+                            <ul>
+                            	<li> Rispetto alla quantità che noi produciamo a Budget, produciamo quasi il doppio delle risorse a Consuntivo </li>
+                                <li> Rispetto invece agli articoli che pensavamo di produrre a Budget, a Consuntivo abbiamo prodotto più articoli che hanno un costo maggiore </li>
+                                <li> Il costo unitario del lavoro diretto lo abbiamo scomposto come il tempo di utilizzo di macchinari con difettosità + il tempo di utilizzo di macchinari con difettosità, il tutto moltiplicato per il costo orario per risorsa,area di produziione</li>
+                                <li> Rispetto alla difettosità che avevamo previsto a budget, a consuntivo abbiamo sprecato molte più ore per la produzione di output difettosi</li>
+                                <li> Rispetto invece alle ore che pensavamo di impiegare per la produzione di output non difettosi, a consuntivo abbiamo utilizzato un quantitativo di ore minore  </li>
+                                <li> Infine, rispetto al costo orario previsto, a consuntivo abbiamo un aumento del costo orario delle risorse, con un consecutivo aumento del costo del lavoro diretto  </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                    	<div class="social-icons">
+                        <a class="social-icon" href="scostamenti_ld_articolo.php">x Articolo</a>
+                        <a class="social-icon" href="scostamenti_ld_areaprod.php">x Area Prod</a>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            
+            
+            
+            
+            
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                <h2 class="mb-5">Scostamenti Ricavi</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">              	
+						<table class = "table">
+  							<thead class='thead-dark'>
+      							<tr>
+     	 							<th scope='col'></th>
+      								<th scope='col'>BUDGET</th>
+      								<th scope='col'>ΔV</th>
+      								<th scope='col'>MIX STD</th>
+      								<th scope='col'>Δmix</th>
+      								<th scope='col'> MIX EFF </th>
+      								<th scope='col'>ΔTasso</th>
+      								<th scope='col'>MIX TASSO</th>
+      								<th scope='col'>ΔPrezzo</th>
+      								<th scope='col'>CONSUNTIVO</th>
+								</tr>
+  							</thead>
+  					<!--- RICAVI TOTALI ----->
+   								<tr class = "table__row">
+     								<td class="cCentrato" style="background: rgba(10, 100, 100, 0.5);"><b>RICAVI TOTALI</b></td>
+       								<td class="cCentrato" >395 337,55€</td>
+       								<td class="cCentrato" style="background-color:green;">115 196,62€</td>
+       								<td class="cCentrato" >510 534,17€</td>
+       								<td class="cCentrato" style="background-color:green;" >36 879,60€</td>
+       								<td class="cCentrato" > 547 413,77€</td>
+       								<td class="cCentrato" style="background-color:red;" >-78 547,71€</td>
+       								<td class="cCentrato">468 866,06€</td>
+       								<td class="cCentrato" style="background-color:green;" >38 976,79€</td>
+       								<td class="cCentrato">507 842,85€</td>
+   								</tr>
+							</table>
+						</div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <div class="subheading mb-3">CONSIDERAZIONI</div>
+                            <ul>
+                            	<li> Visto il quantitativo aumento del volume di produzione abbiamo anche un aumento dei volumi di vendita, anche se proporzionalmente minori </li>
+                                <li> Inoltre, rispetto alle nostre pervisioni, siamo riusciti a vendere più articoli con un prezzo maggiore</li>
+                                <li> Il prezzo di vendita lo abbiamo scomposto come il prezzo di vendita in valuta locale, diviso il tasso di cambio</li>
+                                <li> Come possiamo notare il Tasso di cambio, rispetto a quello che avevamo previsto, risulta molto più alto e talvolta meno conveniente</li>
+                                <li> Infine vediamo come rispetto ai prezzi di vendita che avevamo deciso a budget, siano superiori nel consuntivo</li>
+                            </ul>
+                        </div>
+                      </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                    	<div class="social-icons">
+                        <a class="social-icon" href="scostamenti_R_articolo.php">x Articolo</a>
+                        <a class="social-icon" href="scostamenti_R_cliente.php">x Cliente</a>
+                        <a class="social-icon" href="scostamenti_R_Paese.php">x Valuta</a>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
